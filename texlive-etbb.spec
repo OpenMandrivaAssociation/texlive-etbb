@@ -1,6 +1,6 @@
 Name:		texlive-etbb
-Version:	61872
-Release:	2
+Version:	69098
+Release:	1
 Summary:	An expansion of Edward Tufte's ET-Bembo family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/etbb
