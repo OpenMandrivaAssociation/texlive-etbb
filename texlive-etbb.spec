@@ -3,7 +3,7 @@ Version:	69098
 Release:	1
 Summary:	An expansion of Edward Tufte's ET-Bembo family
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/etbb
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/etbb
 License:	mit lppl1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/etbb.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/etbb.doc.r%{version}.tar.xz
