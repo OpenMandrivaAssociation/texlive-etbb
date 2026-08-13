@@ -1,9 +1,10 @@
 %global tl_name etbb
 %global tl_revision 78931
+%global tl_version 1.057
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	1.057
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	An expansion of Edward Tuftes ET-Bembo family
 Group:		Publishing
@@ -13,7 +14,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/etbb.r%{tl_revis
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/etbb.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 Based on Daniel Benjamin Miller's XETBook, which expanded Tufte's
@@ -24,3 +26,10 @@ figures, a new capital Sharp S with small caps version, along with
 macros to activate these features in LaTeX. Both otf and pfb are
 provided.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from etbb:
+Map ETbb.map
+TL_DROPIN_EOF
